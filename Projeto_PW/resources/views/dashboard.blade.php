@@ -39,9 +39,10 @@
                                 <tbody class="divide-y divide-gray-200">
                                     @foreach($desenhos as $desenho)
                                     <tr class="hover:bg-gray-100">
-                                        <td class="border-none p-4 text-center">
-                                            <img src="data:image/jpeg;base64,{{ base64_encode($desenho->imagem) }}" alt="{{ $desenho->nome_personagem }}" class="w-20 h-auto mx-auto">
-                                        </td>
+                                    <td class="border-none p-4 text-center">
+                                        <img src="{{ asset('storage/' . $desenho->imagem) }}" alt="{{ $desenho->nome_personagem }}" class="w-20 h-auto mx-auto">
+                                    </td>
+
                                         <td class="border-none p-4">{{ $desenho->nome_personagem }}</td>
                                         <td class="border-none p-4">{{ $desenho->nome_desenho }}</td>
                                         <td class="border-none p-4 flex space-x-2 justify-center">

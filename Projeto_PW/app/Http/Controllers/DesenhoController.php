@@ -44,28 +44,30 @@ public function armazenar(Request $req)
     }
 
     // Atualizar um desenho existente
-    public function atualizar(Request $req, $id)
-    {
-        $req->validate([
-            'nome_personagem' => 'required|string|max:255',
-            'nome_desenho' => 'required|string|max:255',
-            'imagem' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
+    // Atualizar um desenho existente
+public function atualizar(Request $req, $id)
+{
+    // Encontrar o desenho pelo ID
+    $desenho = Desenho::findOrFail($id);
+    
+    // Atualiza os dados do desenho
+    $desenho->nome_personagem = $req->nome_personagem;
+    $desenho->nome_desenho = $req->nome_desenho;
 
-        $desenho = Desenho::findOrFail($id);
-
-        if ($req->hasFile('imagem')) {
-            // Lê o conteúdo da nova imagem e armazena como binário
-            $imagem = file_get_contents($req->file('imagem')->getRealPath());
-            $desenho->imagem = $imagem;
-        }
-
-        $desenho->nome_personagem = $req->nome_personagem;
-        $desenho->nome_desenho = $req->nome_desenho;
-        $desenho->save();
-
-        return redirect()->route('dashboard')->with('success', 'Desenho atualizado com sucesso!');
+    // Verifica se uma nova imagem foi enviada
+    if ($req->hasFile('imagem')) {
+        // Armazena a nova imagem e atualiza o caminho no objeto $desenho
+        $imagePath = $req->file('imagem')->store('imagens', 'public');
+        $desenho->imagem = $imagePath;
     }
+
+    // Salva as alterações no banco de dados
+    $desenho->save();
+    
+    // Redireciona para a lista de desenhos com uma mensagem de sucesso
+    return redirect()->route('dashboard')->with('success', 'Desenho atualizado com sucesso!');
+}
+
 
     // Excluir um desenho
     public function excluir($id)
