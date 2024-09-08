@@ -15,6 +15,12 @@ Route::get('/dashboard', function () {
     return view('dashboard', compact('desenhos'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+// Rota para o Desenvolvedores
+Route::get('/desenvolvedores', function () {
+    $desenhos = Desenho::all();
+    return view('desenvolvedores', compact('desenhos'));
+})->middleware(['auth', 'verified'])->name('desenvolvedores');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

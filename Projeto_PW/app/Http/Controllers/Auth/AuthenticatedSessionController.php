@@ -26,7 +26,11 @@ class AuthenticatedSessionController extends Controller
     {
         $request->authenticate();
 
+        // Regenerar a sessão para evitar fixação de sessão
         $request->session()->regenerate();
+
+        // Definir a mensagem de sucesso na sessão
+        $request->session()->flash('login_success', 'Você está logado!');
 
         return redirect()->intended(route('dashboard', absolute: false));
     }
@@ -38,8 +42,8 @@ class AuthenticatedSessionController extends Controller
     {
         Auth::guard('web')->logout();
 
+        // Invalidar a sessão e regenerar o token CSRF
         $request->session()->invalidate();
-
         $request->session()->regenerateToken();
 
         return redirect('/');
