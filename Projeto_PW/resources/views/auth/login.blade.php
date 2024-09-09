@@ -14,6 +14,10 @@
             overflow: hidden; 
         }
 
+        .custom-label {
+            color: black;
+        }
+
         /* Container para card e imagem */
         .container {
             position: relative;
@@ -115,14 +119,14 @@
                     @csrf
                     <!-- Email Address -->
                     <div>
-                        <x-input-label for="email" :value="__('Digite Seu Email:')" />
+                        <x-input-label for="email" :value="__('Digite Seu Email:')" class="custom-label"/>
                         <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
                         <x-input-error :messages="$errors->get('email')" class="mt-2" />
                     </div>
 
                     <!-- Password -->
                     <div class="mt-4">
-                        <x-input-label for="password" :value="__('Digite Sua Senha:')" />
+                        <x-input-label for="password" :value="__('Digite Sua Senha:')" class="custom-label"/>
                         <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
                         <x-input-error :messages="$errors->get('password')" class="mt-2" />
                     </div>
@@ -131,7 +135,7 @@
                     <div class="block mt-4">
                         <label for="remember_me" class="inline-flex items-center">
                             <input id="remember_me" type="checkbox" class="rounded text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                            <span class="ml-2 text-sm text-gray-600">{{ __('Lembrar Login') }}</span>
+                            <span class="ml-2 text-sm text-black-600">{{ __('Lembrar Login') }}</span>
                         </label>
                     </div>
 
@@ -143,7 +147,7 @@
                         @endif
 
                         <x-primary-button class="login-button ml-3">
-                            {{ __('Log in') }}
+                            {{ __('Logar') }}
                         </x-primary-button>
                     </div>
                 </form>
