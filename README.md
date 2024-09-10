@@ -1,6 +1,6 @@
 # ProjetoPw
 
-**![Os Divertidamente](https://imagens-crud/titulo.png)**
+**Tema: Os Divertidamente**
 
 Tela crud desenvolvida com breeze e o blade em laravel.
 </div>
