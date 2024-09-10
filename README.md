@@ -12,6 +12,8 @@ Tela crud desenvolvida com breeze e o blade em laravel.
 <div align="center">
   
   <h4>Alguns Layouts do Crud:</h4>
-  <img width="500" src="https://github.com/Joanzin54P/ProjetoPw/imagens-crud/Desenvolvedores.png">
+  
+ ![Desenvolvedores](https://github.com/user-attachments/assets/7123c6cb-c5d5-4deb-9ec5-73c377be4564)
+
 
 </div>
