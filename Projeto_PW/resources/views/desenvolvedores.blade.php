@@ -121,24 +121,60 @@
     width: 150px; /* Ajustei o tamanho da imagem para ser mais proporcional */
     height: 150px;
     object-fit: cover;
-    border: 1px solid #74588f;
+    border: 1px solid black;
 }
 
+/* Card 1 */
 .caixinha h1 {
-    color: #333;
-    margin-bottom: 10px;
-    font-size: 22px;
+    font-size: 25px; /* Tamanho do título do primeiro card */
+    font-weight: bold;
+    color: #38293e;
 }
 
 .caixinha p {
-    color: #555;
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 18px; /* Tamanho do parágrafo do primeiro card */
+    color: #d2cdd9;
 }
 
-.caixinha strong {
-    color: #487aa1;
+/* Card 2 */
+.caixinhaa h1 {
+    font-size: 25px; /* Tamanho do título do segundo card */
+    font-weight: bold;
+    color: #214e29;
 }
+
+.caixinhaa p {
+    font-size: 18px; /* Tamanho do parágrafo do segundo card */
+    color: #4b9768;
+}
+
+/* Card 3 */
+.caixinhaaa h1 {
+    font-size: 25px; /* Tamanho do título do terceiro card */
+    font-weight: bold;
+    color: #211213;
+}
+
+.caixinhaaa p {
+    font-size: 18px;
+    color: #f0e7da; /* Tamanho do parágrafo do terceiro card */
+}
+
+/* Card 1 */
+.caixinha strong {
+    color: #38293e; /* Cor para o strong do primeiro card (Tomato) */
+}
+
+/* Card 2 */
+.caixinhaa strong {
+    color: #214e29; /* Cor para o strong do segundo card (LimeGreen) */
+}
+
+/* Card 3 */
+.caixinhaaa strong {
+    color: #211213; /* Cor para o strong do terceiro card (DodgerBlue) */
+}
+
 
     @keyframes float {
         0% { transform: translateY(0px); }
