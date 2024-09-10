@@ -32,7 +32,7 @@ class AuthenticatedSessionController extends Controller
         // Definir a mensagem de sucesso na sessão
         $request->session()->flash('login_success', 'Você está logado!');
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        return redirect()->intended(route('bemv', absolute: false));
     }
 
     /**

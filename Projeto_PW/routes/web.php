@@ -21,7 +21,7 @@ Route::get('/desenvolvedores', function () {
     return view('desenvolvedores', compact('desenhos'));
 })->middleware(['auth', 'verified'])->name('desenvolvedores');
 
-// Rota para o Bem vindo
+// Rota para o dashboard
 Route::get('/dashboard', function () {
     $desenhos = Desenho::all();
     return view('dashboard', compact('desenhos'));
