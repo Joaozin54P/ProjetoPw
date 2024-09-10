@@ -9,6 +9,13 @@
     /* Fonte Fredoka One */
     @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+    body {
+    background: linear-gradient(to bottom, #0a1f44, #002b7f); 
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+
     .container {
     position: relative;
     display: flex;
@@ -49,18 +56,58 @@
     animation: float 4s ease-in-out infinite; /* Aplica a animação de flutuação */
 }
 
+/* Card 1 */
 .caixinha {
-    background-color: #a42bb1;
+    background-image: url('{{ asset('Foto/1.png') }}'); /* Imagem de fundo do primeiro card */
+    background-size: cover;
+    background-position: center;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    padding: 20px; /* Diminuí o padding para que os cards fiquem mais compactos */
-    max-width: 350px; /* Ajustei a largura máxima dos cards */
-    width: 100%; /* Faz com que os cards se ajustem ao contêiner pai */
+    padding: 20px;
+    max-width: 350px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 400px;
     text-align: center;
+    color: white;
+}
+
+/* Card 2 */
+.caixinhaa {
+    background-image: url('{{ asset('Foto/2.png') }}'); /* Imagem de fundo do segundo card */
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+    text-align: center;
+    color: white;
+}
+
+/* Card 3 */
+.caixinhaaa {
+    background-image: url('{{ asset('Foto/3.png') }}'); /* Imagem de fundo do terceiro card */
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+    text-align: center;
+    color: white;
 }
 
 .foto {
@@ -100,54 +147,55 @@
     }
     </style>
      <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="p-6 text-gray-900 dark:text-gray-100">
-                <!-- Conteúdo Adicional Pode Ser Adicionado Aqui -->
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="p-6 text-gray-900 dark:text-gray-100">
+            <!-- Conteúdo Adicional Pode Ser Adicionado Aqui -->
+        </div>
+
+        <div class="cards-container"> <!-- Contêiner dos cards -->
+            <div class="floating-container">
+                <div class="character-image">
+                    <img src="{{ asset('Foto/medo.png') }}" alt="Character">
+                </div>
+                <div class="caixinha"> <!-- Primeiro card -->
+                    <div class="foto">
+                        <img src="{{ asset('Foto/Joee.jpeg') }}" alt="Foto de Perfil">
+                    </div>
+                    <h1>João Pedro</h1>
+                    <p><strong>Série:</strong> 3º Ano</p>
+                    <p><strong>Curso:</strong> Desenvolvimento de Sistemas</p>
+                </div>
             </div>
 
-            <div class="cards-container"> <!-- Contêiner dos cards -->
-                <div class="floating-container">
-                    <div class="character-image">
-                        <img src="{{ asset('Foto/medo.png') }}" alt="Character">
-                    </div>
-                    <div class="caixinha" id="caixinha">
-                        <div class="foto">
-                            <img src="{{ asset('Foto/A.jpg') }}" alt="Foto de Perfil">
-                        </div>
-                        <h1>João Pedro</h1>
-                        <p><strong>Série:</strong> 3º Ano</p>
-                        <p><strong>Curso:</strong> Desenvolvimento de Sistemas</p>
-                    </div>
+            <div class="floating-container">
+                <div class="character-image">
+                    <img src="{{ asset('Foto/nojinho.png') }}" alt="Character">
                 </div>
-
-                <div class="floating-container">
-                    <div class="character-image">
-                        <img src="{{ asset('Foto/nojinho.png') }}" alt="Character">
+                <div class="caixinhaa"> <!-- Segundo card -->
+                    <div class="foto">
+                        <img src="{{ asset('Foto/Mari.jpeg') }}" alt="Foto de Perfil">
                     </div>
-                    <div class="caixinha" id="caixinha">
-                        <div class="foto">
-                            <img src="{{ asset('Foto/A.jpg') }}" alt="Foto de Perfil">
-                        </div>
-                        <h1>Mariana Ocireu</h1>
-                        <p><strong>Série:</strong> 3º Ano</p>
-                        <p><strong>Curso:</strong> Desenvolvimento de Sistemas</p>
-                    </div>
+                    <h1>Mariana Ocireu</h1>
+                    <p><strong>Série:</strong> 3º Ano</p>
+                    <p><strong>Curso:</strong> Desenvolvimento de Sistemas</p>
                 </div>
+            </div>
 
-                <div class="floating-container">
-                    <div class="character-image">
-                        <img src="{{ asset('Foto/raiva.png') }}" alt="Character">
+            <div class="floating-container">
+                <div class="character-image">
+                    <img src="{{ asset('Foto/raiva.png') }}" alt="Character">
+                </div>
+                <div class="caixinhaaa"> <!-- Terceiro card -->
+                    <div class="foto">
+                        <img src="{{ asset('Foto/Beca.jpeg') }}" alt="Foto de Perfil">
                     </div>
-                    <div class="caixinha" id="caixinha">
-                        <div class="foto">
-                            <img src="{{ asset('Foto/A.jpg') }}" alt="Foto de Perfil">
-                        </div>
-                        <h1>Rebeca</h1>
-                        <p><strong>Série:</strong> 3º Ano</p>
-                        <p><strong>Curso:</strong> Desenvolvimento de Sistemas</p>
-                    </div>
+                    <h1>Rebeca</h1>
+                    <p><strong>Série:</strong> 3º Ano</p>
+                    <p><strong>Curso:</strong> Desenvolvimento de Sistemas</p>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
 </x-app-layout>
