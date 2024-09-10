@@ -157,6 +157,17 @@
 
 
 <script>
+    // Função para mostrar o toast
+    function showToast(message) {
+        const toast = document.getElementById('toast');
+        if (toast) {
+            toast.classList.remove('hidden');
+            toast.innerText = message;
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+    }
     document.getElementById('openModal').onclick = function() {
         document.getElementById('modal').classList.remove('hidden');
     };

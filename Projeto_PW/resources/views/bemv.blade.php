@@ -62,3 +62,4 @@
             showToast('{{ session('login_success') }}');
         };
     @endif
+ </script>

@@ -5,6 +5,17 @@
         </h2>
     </x-slot>
 
+    <style>
+    /* Fonte Fredoka One */
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+    body {
+    background: linear-gradient(to bottom, #0a1f44, #002b7f); 
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    }
+    </style>
+
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">

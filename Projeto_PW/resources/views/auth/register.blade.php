@@ -87,7 +87,7 @@
             margin-top: 8px;
             border-radius: 5px;
             border: 1px solid #ccc;
-            background-color: #f9f9f9;
+            background-color: black;
             transition: border-color 0.3s ease;
         }
 
