@@ -10,16 +10,22 @@ Route::get('/', function () {
 });
 
 // Rota para o dashboard
-Route::get('/dashboard', function () {
+Route::get('/bemv', function () {
     $desenhos = Desenho::all();
-    return view('dashboard', compact('desenhos'));
-})->middleware(['auth', 'verified'])->name('dashboard');
+    return view('bemv', compact('desenhos'));
+})->middleware(['auth', 'verified'])->name('bemv');
 
 // Rota para o Desenvolvedores
 Route::get('/desenvolvedores', function () {
     $desenhos = Desenho::all();
     return view('desenvolvedores', compact('desenhos'));
 })->middleware(['auth', 'verified'])->name('desenvolvedores');
+
+// Rota para o Bem vindo
+Route::get('/dashboard', function () {
+    $desenhos = Desenho::all();
+    return view('dashboard', compact('desenhos'));
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
