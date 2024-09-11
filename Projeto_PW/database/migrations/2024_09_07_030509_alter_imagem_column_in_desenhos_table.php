@@ -9,7 +9,7 @@ class AlterImagemColumnInDesenhosTable extends Migration
     public function up()
     {
         Schema::table('desenhos', function (Blueprint $table) {
-            $table->LÓNGBlob('imagem')->change();
+            $table->binary('imagem')->nullable()->change();
         });
     }
 
