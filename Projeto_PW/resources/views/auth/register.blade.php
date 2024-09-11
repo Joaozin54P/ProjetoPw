@@ -76,7 +76,7 @@
         label {
             font-size: 1.1rem;
             font-weight: 500;
-            color: #333;
+            color: black; /* Cor do texto dos rótulos em preto */
         }
 
         input[type="text"],
@@ -87,7 +87,8 @@
             margin-top: 8px;
             border-radius: 5px;
             border: 1px solid #ccc;
-            background-color: black;
+            background-color: white; /* Cor de fundo das caixas de texto em branco */
+            color: black; /* Cor do texto digitado em preto */
             transition: border-color 0.3s ease;
         }
 
@@ -174,7 +175,7 @@
 
                 <!-- Name -->
                 <div>
-                    <x-input-label for="name" :value="__('Digite Seu Name:')" class="custom-label"/>
+                    <x-input-label for="name" :value="__('Digite Seu Nome:')" class="custom-label"/>
                     <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
                     <x-input-error :messages="$errors->get('name')" class="mt-2" />
                 </div>
@@ -188,14 +189,14 @@
 
                 <!-- Password -->
                 <div>
-                    <x-input-label for="password" :value="__('Digite Sua Password:')" class="custom-label"/>
+                    <x-input-label for="password" :value="__('Digite Sua Senha:')" class="custom-label"/>
                     <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
                     <x-input-error :messages="$errors->get('password')" class="mt-2" />
                 </div>
 
                 <!-- Confirm Password -->
                 <div>
-                    <x-input-label for="password_confirmation" :value="__('Confirme Sua Password:')" class="custom-label"/>
+                    <x-input-label for="password_confirmation" :value="__('Confirme Sua Senha:')" class="custom-label"/>
                     <x-text-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
                     <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                 </div>
